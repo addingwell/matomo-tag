@@ -1,4 +1,4 @@
-# Intercom Server Tag
+# Matomo Server Tag
 
 This tag allows you to setup Matomo via Server Side
 
