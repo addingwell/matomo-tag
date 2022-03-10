@@ -17,3 +17,5 @@ documentation: "https://github.com/addingwell/matomo-tag/blob/master/README.md"
 versions:
   - sha: 1e4fdd3672cb2ad4859dc7d2311f4469c0ed5d2d
     changeNotes: Initial Version
+  - sha: e3bb46028d9e62e0af81e01116ae04968da8098c
+    changeNotes: Updated Description
