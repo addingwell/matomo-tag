@@ -1,9 +1,13 @@
 # Matomo Server Tag
 
-This tag allows you to setup Matomo via Server Side
+This tag allows you to set up Matomo via Server Side
 
 ## How do I use this tag?
 
-This tag currently supports page views and purchase, and both the Universal Analytics and GA4 Clients.
+This tag currently supports two events:
+- page views (default to `page_view`)
+- purchase (default to `purchase`)
 
-By default, the IP sent is the one of the server, if you want to have the correct one, you must create an OAuth Token and set it in the Auth Token parameter.
+It was also tested on both the Universal Analytics and GA4 Clients.
+
+By default, the IP sent is the one of your server, if you want to have the correct one, you must create an OAuth Token and set it in the Auth Token parameter.
