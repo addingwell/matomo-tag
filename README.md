@@ -13,3 +13,10 @@ This tag currently supports two events, that you can rename if needed:
 ## Send the correct IP Address to Matomo
 
 By default, the IP sent is the one of your GTM server. If you want to have the correct one, you must create an OAuth Token and set it in the Auth Token parameter.
+
+
+# About
+
+Created by [Addingwell](addingwell.com).
+
+Added event support thanks to [Qweri](qweri.fr)
