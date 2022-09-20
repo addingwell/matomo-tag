@@ -15,6 +15,9 @@
 homepage: "https://www.addingwell.com"
 documentation: "https://github.com/addingwell/matomo-tag/blob/master/README.md"
 versions:
+  - sha: 2a71c14b10080f7c232f71682d6ea51332a2684b
+    changeNotes: Fix: Event Label is Event Name Latest
+
   - sha: b5a5c03e58b1cd084eca9e218a0c8d4053095833
     changeNotes: Support for custom event to matomo
 
