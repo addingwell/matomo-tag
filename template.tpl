@@ -126,7 +126,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "TEXT",
         "name": "event_label",
-        "displayName": "Event label",
+        "displayName": "Event name",
         "simpleValueType": true
       },
       {
