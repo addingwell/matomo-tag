@@ -51,7 +51,7 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Site ID",
     "simpleValueType": true,
     "defaultValue": 1,
-    "help": "ID of the website to be tracked (if there are several, otherwise usually \"1\" (default value)"
+    "help": "ID of the website to be tracked (if there are several, otherwise usually \"1\" (default value))"
   },
   {
     "type": "TEXT",
@@ -134,6 +134,38 @@ ___TEMPLATE_PARAMETERS___
         "name": "event_value",
         "displayName": "Event value",
         "simpleValueType": true
+      }
+    ]
+  },
+  {
+    "type": "GROUP",
+    "name": "optionalParameters",
+    "displayName": "Optional Parameters",
+    "groupStyle": "ZIPPY_CLOSED",
+    "subParams": [
+      {
+        "type": "LABEL",
+        "name": "label2",
+        "displayName": "View Matomo\u0027s documentation for the complete list of attributes available."
+      },
+      {
+        "type": "SIMPLE_TABLE",
+        "name": "optionalParametersTable",
+        "displayName": "",
+        "simpleTableColumns": [
+          {
+            "defaultValue": "",
+            "displayName": "Attribute",
+            "name": "attribute",
+            "type": "TEXT"
+          },
+          {
+            "defaultValue": "",
+            "displayName": "Value",
+            "name": "value",
+            "type": "TEXT"
+          }
+        ]
       }
     ]
   }
@@ -252,6 +284,15 @@ switch (event.event_name) {
 }
 
 if (shouldTrigger) {
+  if (data.optionalParametersTable) {
+    for (let index in data.optionalParametersTable) {
+      const parameter = data.optionalParametersTable[index];
+      if (parameter.value && parameter.attribute) {
+        parameters[parameter.attribute] = parameter.value;
+      }
+    }
+  }
+
   log('Sending to ' + serviceUrl + '?' + toQueryString(parameters));
 
   sendHttpRequest(
