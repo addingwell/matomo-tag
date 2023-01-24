@@ -15,6 +15,9 @@
 homepage: "https://www.addingwell.com"
 documentation: "https://github.com/addingwell/matomo-tag/blob/master/README.md"
 versions:
+  - sha: 9b85e8d5529656560f11bcd05d0807cb3243201e
+    changeNotes: Add option to send custom parameters
+
   - sha: 4541128299183a1083ed5850298a831874664653
     changeNotes: Feature: Create and send cookie to Matomo
 
