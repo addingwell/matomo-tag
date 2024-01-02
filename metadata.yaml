@@ -15,6 +15,9 @@
 homepage: "https://www.addingwell.com"
 documentation: "https://github.com/addingwell/matomo-tag/blob/master/README.md"
 versions:
+  - sha: 3ca6b6a98257a58a178a2a4d9144d1513aa4336e
+    changeNotes: Fix the way items are sent to Matomo
+
   - sha: 9b85e8d5529656560f11bcd05d0807cb3243201e
     changeNotes: Add option to send custom parameters
 
