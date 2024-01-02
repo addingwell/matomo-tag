@@ -247,7 +247,7 @@ switch (event.event_name) {
     parameters.ec_dt = event.discount || undefined;
 
     if (event.items && getType(event.items) === 'array') {
-      parameters.items = [];
+      parameters.ec_items = [];
       event.items.forEach((item) => {
         const categories = [];
         ['', '2', '3', '4', '5'].forEach(cId => {
@@ -260,13 +260,13 @@ switch (event.event_name) {
           categories.push(item.category);
         }
 
-        parameters.items.push([[
+        parameters.ec_items.push([
           item.item_id || item.id || item.item_name, // item sku (required)
           item.item_name || item.name || '', // item name (or if not applicable, set it to an empty string)
           categories.join(' > '), // item category (or if not applicable, set it to an empty string)
           item.price || 0, // item price (or if not applicable, set it to 0)
           item.quantity || 1 // item quantity (or if not applicable, set it to 1)
-        ]]);
+        ]);
       });
     }
 
